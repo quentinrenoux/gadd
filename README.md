@@ -38,17 +38,15 @@ Liste des paramètres
 *   Date de sortie : `datesortie` (par défaut la date actuelle sauf en cas d'antidate où la valeur est celle de l'antidate ; format `_dd_/_MM_/_yyyy_`)
 *   Heure de sortie : `heuresortie` (par défaut l'heure actuelle sauf en cas d'antidate où la valeur est celle de l'antidat ; format `_hh_:_mm_`)
 *   Raison du déplacement : `raison` (par défaut "`0`") **Impossible de combiner plusieurs raisons**
-
-0.  `travail`
-1.  `achats`
-2.  `sante`
-3.  `famille`
-4.  `handicap`
-5.  `sport_animaux`
-6.  `convocation`
-7.  `missions`
-8.  `enfants`
-
+  0.  `travail`
+  1.  `achats`
+  2.  `sante`
+  3.  `famille`
+  4.  `handicap`
+  5.  `sport_animaux`
+  6.  `convocation`
+  7.  `missions`
+  8.  `enfants`
 *   Antidate : `antidate` (par défaut "`0`")
 
 **Toute valeur incorrecte peut provoquer des choses étranges.**
