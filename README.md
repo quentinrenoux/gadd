@@ -1,14 +1,14 @@
 Générateur _serverless_ d'attestation dérogatoire de déplacement
 ================================================================
 
-Éléments et bibliothéques incorporés à cette page
+Éléments et bibliothèques incorporés à cette page
 -------------------------------------------------
 
 *   PDF-LIB ([pdf-lib.js.org/](https://pdf-lib.js.org/))
 *   qrjs2 ([github.com/englishextra/qrjs2](https://github.com/englishextra/qrjs2))
 *   Morceaux de code du générateur officiel d'attestation dérogratoire de déplacement ([media.interieur.gouv.fr/deplacement-covid-19/](https://media.interieur.gouv.fr/deplacement-covid-19/))
 *   `getAllUrlParams` (modifié) ([gist.github.com/juanbrujo/fbc26b73fdad17605b5ba7d5922b44e4](https://gist.github.com/juanbrujo/fbc26b73fdad17605b5ba7d5922b44e4))
-*   PDF de l'attestation dérogratoire de déplacement (en base64)
+*   PDF de l'attestation dérogatoire de déplacement (en base64)
 
 Données et vie privée
 ---------------------
@@ -23,7 +23,7 @@ Dans l'URL, ajoutez `?` puis les différents paramètres séparés par des `&` s
 Exemple : `.../attestation.html?firstname=Jean&lastname=Jacques`
 
 **Si un paramètre n'est pas fourni, c'est sa valeur par défaut qui sera utilisée.**  
-Une fois l'URL complétée avec vos valeurs, accèdez à la page, le téléchargement de votre attestation se fait automatiquement.
+Une fois l'URL complétée avec vos valeurs, accédez à la page, le téléchargement de votre attestation se fait automatiquement.
 
 Liste des paramètres
 --------------------
@@ -36,7 +36,7 @@ Liste des paramètres
 *   Date de naissance : `birthday` (par défaut "`01/01/1970`")
 *   Ville de naissance : `placeofbirth` (par défaut "`Lyon`")
 *   Date de sortie : `datesortie` (par défaut la date actuelle sauf en cas d'antidate où la valeur est celle de l'antidate ; format `_dd_/_MM_/_yyyy_`)
-*   Heure de sortie : `heuresortie` (par défaut l'heure actuelle sauf en cas d'antidate où la valeur est celle de l'antidat ; format `_hh_:_mm_`)
+*   Heure de sortie : `heuresortie` (par défaut l'heure actuelle sauf en cas d'antidate où la valeur est celle de l'antidate ; format `_hh_:_mm_`)
 *   Raison du déplacement : `raison` (par défaut "`0`") **Impossible de combiner plusieurs raisons**
   0.  `travail`
   1.  `achats`
