@@ -199,18 +199,18 @@
 
 							if (paramName.match(/\[\d+\]$/)) {
 								var index = /\[(\d+)\]/.exec(paramName)[1];
-								obj[key][index] = decodeURIComponent(paramValue);
+								obj[key][index] = decodeURIComponent(paramValue).replace( /\+/g, " ");
 							} else {
-								obj[key].push(decodeURIComponent(paramValue));
+								obj[key].push(decodeURIComponent(paramValue)).replace( /\+/g, " ");
 							}
 						} else {
 							if (!obj[paramName]) {
-								obj[paramName] = decodeURIComponent(paramValue);
+								obj[paramName] = decodeURIComponent(paramValue).replace( /\+/g, " ");
 							} else if (obj[paramName] && typeof obj[paramName] === 'string'){
 								obj[paramName] = [obj[paramName]];
-								obj[paramName].push(decodeURIComponent(paramValue));
+								obj[paramName].push(decodeURIComponent(paramValue)).replace( /\+/g, " ");
 							} else {
-								obj[paramName].push(decodeURIComponent(paramValue));
+								obj[paramName].push(decodeURIComponent(paramValue)).replace( /\+/g, " ");
 							}
 						}
 					}
@@ -311,15 +311,15 @@
 					<b>Une fois le formulaire rempli, appuyez sur le bouton "Envoyer". L'URL est complétée avec les informations saisies et le téléchargement de l'attestation commence.</b></p>
 
 				<form method="GET" action="./attestation.html">
-					<label for="lastname">Nom : </label><input type="text" name="lastname" placeholder="Dupont" pattern="\w+"><br>
-					<label for="firstname">Prénom : </label><input type="text" name="firstname" placeholder="Camille" pattern="\w+"><br>
+					<label for="lastname">Nom : </label><input type="text" name="lastname" placeholder="Dupont" pattern=".+"><br>
+					<label for="firstname">Prénom : </label><input type="text" name="firstname" placeholder="Camille" pattern=".+"><br>
 
-					<label for="birthday">Date de naissance : </label><input type="text" name="birthday" placeholder="Lyon" pattern="\d{2}/\d{2}/\d{4}"><br>
-					<label for="placeofbirth">Lieu de naissance : </label><input type="text" name="placeofbirth" placeholder="01/01/1970" pattern="\w+"><br>
+					<label for="birthday">Date de naissance : </label><input type="text" name="birthday" placeholder="01/01/1970" pattern="\d{2}/\d{2}/\d{4}"><br>
+					<label for="placeofbirth">Lieu de naissance : </label><input type="text" name="placeofbirth" placeholder="Lyon" pattern=".+"><br>
 
-					<label for="address">Adresse : </label><input type="text" name="address" placeholder="999 avenue de France" pattern="\w+"><br>
+					<label for="address">Adresse : </label><input type="text" name="address" placeholder="999 avenue de France" pattern=".+"><br>
 					<label for="zipcode">Code postal : </label><input type="text" name="zipcode" placeholder="75001" pattern="\d{5}"><br>
-					<label for="city">Ville : </label><input type="text" name="city" placeholder="Paris" pattern="\w+"><br>
+					<label for="city">Ville : </label><input type="text" name="city" placeholder="Paris" pattern=".+"><br>
 
 					<label for="raison">Raison du déplacement : </label>
 					<select name="raison">
