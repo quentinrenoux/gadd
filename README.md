@@ -1,4 +1,4 @@
-Générateur _serverless_ d'attestation dérogatoire de déplacement
+Générateur d'attestation dérogatoire de déplacement
 ================================================================
 
 Éléments et bibliothèques incorporés à cette page
